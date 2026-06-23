@@ -13,6 +13,11 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v7 
+        # install set up python version
+      - name: set up python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13' 
         # install linter for python
       - name: Install Linter
         run: pip install ruff
