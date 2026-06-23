@@ -1,0 +1,21 @@
+name: Auto Linter
+on:
+  push:
+    branches: [ main ]
+    paths: "*.py"
+    # if any changes in any python file (.py) then only run this linter 
+    #ignore the linter if changes other than python file
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    # this step will automatically clone the code of current branch to runner
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v7 
+
+      - name: Install Linter
+        run: pip install ruff
+        
+  
+  
