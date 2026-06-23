@@ -1,4 +1,4 @@
-# this is python flask code for flash app, need python
+# this is python flask code for flash app, need python.
 from flask import Flask, render_template
 app = Flask(__name__)
 
