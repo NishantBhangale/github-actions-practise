@@ -23,6 +23,20 @@ jobs:
 
       - name: Configure ESLint
         run: npm init @eslint/config@latest
+
+      
+      - name: Create ESLint Config
+        run: |
+          cat > eslint.config.js << 'EOF'
+          export default [
+            {
+              files: ["app.js"],
+              rules: {
+                semi: "error"
+              }
+            }
+          ];
+          EOF
         
       - name: Run ESLint
         run: eslint .
