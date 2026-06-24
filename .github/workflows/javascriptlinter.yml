@@ -26,7 +26,7 @@ jobs:
           cat > eslint.config.js << 'EOF'
           export default [
             {
-              files: ["app.js"],
+              files: ["*.js"],
               rules: {
                 semi: "error"
               }
