@@ -20,10 +20,6 @@ jobs:
           
       - name: Install ESlint
         run: npm install -g eslint
-
-      - name: Configure ESLint
-        run: npm init @eslint/config@latest
-
       
       - name: Create ESLint Config
         run: |
