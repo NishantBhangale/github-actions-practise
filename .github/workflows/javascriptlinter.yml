@@ -1,0 +1,25 @@
+name: JSLinter
+
+on: 
+  push: 
+    branches: 
+      - main
+    paths:
+      - "*.js"
+      
+jobs:
+  code:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: checkout/clone the code
+        uses: actions/checkout@v4
+        # install js on system
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24 #
+          
+      - name: Install ESlint
+        run: npm install -g eslint
+        
+      - name: Run ESLint
+        run: eslint .
