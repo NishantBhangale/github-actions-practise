@@ -3,4 +3,4 @@ function greetUser(name) {
 }
 
 // How to use it:
-console.log(greetUser("Alice")); // Outputs: Hello, Alice!
+console.log(greetUser("Marcus")); // Outputs: Hello, Marcus!
